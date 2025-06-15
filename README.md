@@ -13,15 +13,17 @@
 1. 버전 호환 정리
 Java 8 사용 시 javac -source 8 -target 8로 다시 컴파일 가능
 
-가능하면 Java 17 이상 설치 권장 (현재 기준 Java 21~24 안정)
+Java 17 이상 설치 권장 (현재 기준 Java 21~24 안정)
 
 2. 네트워크 구조 정비
 MulticastSocket 설정 시 포트 재사용 옵션 제거
 
+MulticastSocket 초기화 시 setReuseAddress(true) 설정을 제거했습니다.
+이 설정은 운영체제에 따라 포트 바인딩 충돌이나 데이터 수신 누락 문제를 유발할 수 있어,
+단일 수신 전용 소켓으로 설계해 안정성을 확보했습니다.
+
 Receiver가 먼저 실행되어야 패킷 손실 없이 수신 가능
 
-3. 저장 구조 명확화
-WriteToFileEvent 클래스에 데이터 길이 필드 확인 로직 포함
 
 저장 시 상대 경로 지정 (경로 오류 방지)
 
