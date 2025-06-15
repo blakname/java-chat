@@ -45,7 +45,8 @@ java MulticastSender    # 나중에 실행
 
 주의사항
 멀티캐스트는 같은 네트워크 대역 안에서만 정상 작동
-
-실행 순서 반드시 지킬 것 (Receiver → Sender)
-
+실행 순서 (Receiver → Sender)
 파일 저장 경로는 상대 경로로 현재 폴더 기준
+자바 버전
+x64 Installer	205.85 MB	
+https://download.oracle.com/java/24/latest/jdk-24_windows-x64_bin.exe (sha256)
